@@ -1,15 +1,16 @@
 ﻿using System;
+using System.Diagnostics;
 
 class Program
 {
     static void Main()
     {
-        // Kullanıcıdan hangi programı çalıştırmak istediğini seçmesini iste
+        // Kullanıcıdan hangi programı çalıştırmak istediğini seçme işlemi
         Console.WriteLine("Hangi programı çalıştırmak istersiniz?\n1 - Rastgele Sayı Bulma Oyunu\n2 - Hesap Makinesi\n3 - Ortalama Hesaplama");
         Console.Write("Seçiminiz: ");
         int choice = Convert.ToInt32(Console.ReadLine());
 
-        // Kullanıcının seçimine göre ilgili fonksiyonu çağır
+        // Kullanıcının seçimine göre ilgili fonksiyonu çağırma
         switch (choice)
         {
             case 1:
@@ -36,7 +37,7 @@ class Program
 
         Console.WriteLine("1 ile 100 arasında bir sayıyı tahmin etmeye çalışın. Toplam 5 hakkınız var.");
 
-        while (kalanHak > 0) // Kullanıcıya tahmin yapma hakkı ver
+        while (kalanHak > 0) // Kullanıcıya tahmin yapma hakkı
         {
             Console.Write("Tahmininiz: ");
             int tahmin = Convert.ToInt32(Console.ReadLine());
@@ -57,11 +58,11 @@ class Program
                 Console.WriteLine("Daha düşük bir sayı girin.");
             }
 
-            kalanHak--; // Kullanıcının kalan hakkını bir azalt
+            kalanHak--; // Kullanıcının kalan hakkını bir azaltma
             Console.WriteLine($"Kalan hakkınız: {kalanHak}");
         }
 
-        // Kullanıcı tüm haklarını kullanırsa doğru sayıyı göster
+        // Kullanıcı tüm haklarını kullanırsa doğru sayıyı gösterme işlemi
         Console.WriteLine($"Tahmin hakkınız bitti. Doğru sayı: {rastgeleSayi}");
     }
 
@@ -75,9 +76,9 @@ class Program
         double sayi2 = Convert.ToDouble(Console.ReadLine()); // İkinci sayıyı al
 
         Console.Write("Yapmak istediğiniz işlemi seçin (+, -, *, /): ");
-        char islem = Convert.ToChar(Console.ReadLine()); // İşlem tipini al
+        char islem = Convert.ToChar(Console.ReadLine());
 
-        double sonuc;
+        double sonuc; //işlemler ondalıklı değerler içerebileceği için double türünde tanımladım
 
         // Seçilen işleme göre hesaplama yap
         switch (islem)
@@ -95,7 +96,7 @@ class Program
                 Console.WriteLine($"Sonuç: {sonuc}");
                 break;
             case '/':
-                if (sayi2 != 0) // Bölme işleminde sıfıra bölme hatası kontrolü
+                if (sayi2 != 0) //  sıfıra bölme hatası kontrolü
                 {
                     sonuc = sayi1 / sayi2;
                     Console.WriteLine($"Sonuç: {sonuc}");
@@ -123,7 +124,7 @@ class Program
         Console.Write("Üçüncü ders notunu girin: ");
         double not3 = Convert.ToDouble(Console.ReadLine()); // Üçüncü ders notunu al
 
-        // Notların geçerli olup olmadığını kontrol et (0 ile 100 arasında olmalı)
+        // Notların geçerli olup olmadığını kontrol etme  (0 ile 100 arasında olmalı)
         if ((not1 < 0 || not1 > 100) || (not2 < 0 || not2 > 100) || (not3 < 0 || not3 > 100))
         {
             Console.WriteLine("Hata: Notlar 0 ile 100 arasında olmalıdır.");
@@ -132,10 +133,11 @@ class Program
 
         // Ortalamayı hesapla
         double ortalama = (not1 + not2 + not3) / 3;
-        Console.WriteLine($"Ortalamanız: {ortalama:F2}");
+        double yuvarlanmisOrtalama = Math.Round(ortalama, 2); // 2 ondalık basamağa yuvarlar örn: 75.666  bunun çıktısı 75.67 olur
+        Console.WriteLine($"Ortalamanız: {yuvarlanmisOrtalama}");
 
-        // Ortalama yuvarlanmış ve harf notu hesaplanmış
-        int ortalamaYuvarlanmis = (int)Math.Floor(ortalama);
+
+        int ortalamaYuvarlanmis = (int)Math.Floor(ortalama); // Ortalamayı tam sayı olarak aşağı yuvarlarma ,double olan türü int'e çeviriyoruz
 
         // Ortalama değerine göre harf notu ver
         switch (ortalamaYuvarlanmis)
@@ -171,3 +173,6 @@ class Program
     }
 
 }
+//Switch -case yapısını bu projede kullanmamın sebebi, kullanıcının yapacağı seçimlere göre ilgili fonksiyonları çalıştırmayı daha düzenli ve okunabilir bir şekilde organize etmekti.
+//Ayrıca seçimler sabit değerler olduğu için, bu yapı if-else 'den daha pratik ve performanslı bir çözüm sağladı.
+//Özellikle kullanıcıya basit ve anlaşılır bir deneyim sunmayı hedeflediğim için bu yapıyı tercih ettim.
