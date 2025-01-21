@@ -1,60 +1,59 @@
-# 📋 Üç Aşamalı Konsol Uygulaması
+# 📋 Three-Stage Console Application  
 
-**Üç Aşamalı Konsol Uygulaması**'na hoş geldiniz! 🚀 Bu proje, kullanıcıların üç farklı programdan birini seçip çalıştırabileceği etkileşimli bir konsol tabanlı uygulamadır. Her bir program, C# dilindeki temel kavramları eğlenceli ve öğretici bir şekilde öğrenmenizi sağlar.
+**Welcome to the Three-Stage Console Application!** 🚀 This project is an interactive console-based application that allows users to select and run one of three different programs. Each program provides a fun and educational way to learn fundamental C# concepts.  
 
----
+---  
 
-## 🌟 Özellikler
+## 🌟 Features  
 
-### 1️⃣ Rastgele Sayı Tahmin Oyunu 🎲
-- Bilgisayar **1 ile 100** arasında rastgele bir sayı üretir.
-- Kullanıcının bu sayıyı tahmin etmek için **5 hakkı** vardır.
-- Her tahminde "daha yüksek" veya "daha düşük" gibi ipuçları verilir.
-- Doğru tahmin edilirse kullanıcı tebrik edilir 🎉. Aksi takdirde doğru sayı gösterilir.
+### 1️⃣ Random Number Guessing Game 🎲  
+- The computer generates a **random number between 1 and 100**.  
+- The user has **5 attempts** to guess the number.  
+- Hints such as "higher" or "lower" are provided for each guess.  
+- If the user guesses correctly, they are congratulated 🎉; otherwise, the correct number is revealed.  
 
-### 2️⃣ Hesap Makinesi 🧮
-- Dört temel matematiksel işlemi gerçekleştirin:
-  - Toplama ➕
-  - Çıkarma ➖
-  - Çarpma ✖️
-  - Bölme ➗
-- Kullanıcı iki sayı girer ve yapılacak işlemi seçer.
-- Sonuç anında ekrana yazdırılır.
-- Sıfıra bölme durumu düzgün bir şekilde ele alınır ve kullanıcıya hata mesajı gösterilir.
+### 2️⃣ Calculator 🧮  
+- Perform four basic mathematical operations:  
+  - Addition ➕  
+  - Subtraction ➖  
+  - Multiplication ✖️  
+  - Division ➗  
+- The user enters two numbers and selects the operation to perform.  
+- The result is displayed instantly.  
+- Division by zero is handled properly with an error message.  
 
-### 3️⃣ Ortalama Not Hesaplayıcı 📊
-- Kullanıcı üç not girişi yapar (**0-100** aralığında).
-- Program, bu notların ortalamasını hesaplar ve harf notu verir:
-  - **AA** için 90-100
-  - **FF** için 0-54 ve diğerleri!
-- Notların geçerli olup olmadığını kontrol eder.
-- Geçersiz girişler için hata mesajı gösterilir.
+### 3️⃣ Average Grade Calculator 📊  
+- The user enters three grades (**between 0 and 100**).  
+- The program calculates the average and assigns a letter grade:  
+  - **AA** for 90-100  
+  - **FF** for 0-54, and others accordingly!  
+- The program validates the input to ensure it is within the correct range.  
+- Invalid entries trigger an error message.  
 
----
+---  
 
-## 🛠️ Uygulama Nasıl Çalıştırılır
+## 🛠️ How to Run the Application  
 
-1. Projeyi favori C# IDE'nizde (örneğin, **Visual Studio**) açın.
-2. Tüm bağımlılıkların doğru yapılandırıldığından emin olmak için projeyi derleyin.
-3. Uygulamayı debug modunda veya konsoldan çalıştırın.
-4. Ekrandaki yönlendirmeleri takip ederek bir program seçin ve keyifle kullanın!
+1. Open the project in your favorite C# IDE (e.g., **Visual Studio**).  
+2. Compile the project to ensure all dependencies are correctly configured.  
+3. Run the application in debug mode or from the console.  
+4. Follow the on-screen instructions to select a program and enjoy!  
 
----
+---  
 
-## 💻 Kullanılan Teknolojiler
+## 💻 Technologies Used  
 
-- **Programlama Dili:** C#
-- **Geliştirme Ortamı:** Visual Studio (veya herhangi bir C# uyumlu IDE)
+- **Programming Language:** C#  
+- **Development Environment:** Visual Studio (or any C#-compatible IDE)  
 
----
+---  
 
-## 🔗 Ek Notlar
+## 🔗 Additional Notes  
 
-- Kod, kolay anlaşılması için yorum satırları ile açıklanmıştır.
-- Hata kontrolleri, kullanıcı dostu bir deneyim sağlar.
-- Temel programlama kavramlarını anlamaya yönelik bir yapıya sahiptir.
+- The code includes comments for better understanding.  
+- Error handling ensures a user-friendly experience.  
+- Designed to help users grasp fundamental programming concepts.  
 
----
+---  
 
-🎉 **Bu projeyi keşfederken ve öğrenirken iyi eğlenceler!** 😊
-
+🎉 **Enjoy exploring and learning with this project!** 😊  
